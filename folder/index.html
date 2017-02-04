@@ -1,0 +1,18 @@
+
+<!-- Index page for client application -->
+<html>
+  <head>
+    <title>Login Page</title>
+  </head>
+  <body>
+      <h1>Hello!</h1>
+     <!-- Creates a Clever Login button with the encoded query string -->
+    <p>Button with state parameter:</p>
+    <p><a href="https://clever.com/oauth/authorize?{{query_string}}" alt="Log in with Clever"><img src="https://s3.amazonaws.com/assets.clever.com/sign-in-with-clever/sign-in-with-clever-full.png" /></a></p>
+
+    <p>Button with no state parameter:</p>
+    <!-- Hardcoded for demonstration purposes only -->
+    <p><a href="https://clever.com/oauth/authorize?response_type=code&client_id=dab7a1d7898721cda256&redirect_uri=https%3A%2F%2Fclever-takehome.herokuapp.com%2Foauth&district_id=588bbf9c837c7f00017667b6" alt="Log in with Clever"><img src="https://s3.amazonaws.com/assets.clever.com/sign-in-with-clever/sign-in-with-clever-full.png" /></a></p>
+  </body>
+</html>
+
