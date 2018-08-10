@@ -105,7 +105,7 @@ def oauth():
 		else:
 			# Get the data type from the JSON response from the Clever endpoint and store contents in the user's Flask session.
 			session['clever_data'] = d.json()
-			print d.json()
+			print "json: " + d.json()
 			return redirect('/application')
 
 # Application handler reserved for users who have successfully logged in.
