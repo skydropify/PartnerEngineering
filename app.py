@@ -80,6 +80,9 @@ def oauth():
 		except (KeyError) as error:
 			return redirect(CLEVER_AUTH_URL + '?' + generate_encoded_query_string(), 302)
 		
+		# Print token
+		print "token = " + token
+		
 		# Use the token to create headers for requests to Clever's API.
 		auth_headers = {'Authorization': 'Bearer {token}'.format(token=token)}
 		
@@ -102,6 +105,7 @@ def oauth():
 		else:
 			# Get the data type from the JSON response from the Clever endpoint and store contents in the user's Flask session.
 			session['clever_data'] = d.json()
+			print d.json()
 			return redirect('/application')
 
 # Application handler reserved for users who have successfully logged in.
